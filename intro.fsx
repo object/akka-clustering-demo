@@ -4,8 +4,6 @@
 open System
 open Akka.Cluster.Tools.Singleton
 open Akkling
-open Petabridge.Cmd.Host
-open Petabridge.Cmd.Cluster
 
 let configWithPort (port:int) =
     let config = Configuration.parse ("""
@@ -31,7 +29,3 @@ let configWithPort (port:int) =
 
 let system1 = System.create "cluster-system" (configWithPort 5000)
 let system2 = System.create "cluster-system" (configWithPort 5001)
-
-// let cmd = PetabridgeCmd.Get(system1)
-// cmd.RegisterCommandPalette(ClusterCommands.Instance)
-// cmd.Start()

@@ -43,7 +43,7 @@ let configWithPort (port:int) (role:string) =
 let dispatcher = System.create "cluster-system" (configWithPort 5000 "dispatcher")
 let _worker1 = System.create "cluster-system" (configWithPort 5001 "worker")
 let _worker2 = System.create "cluster-system" (configWithPort 5002 "worker")
-// let _worker3 = System.create "cluster-system" (configWithPort 5003 "worker")
+let _worker3 = System.create "cluster-system" (configWithPort 5003 "worker")
 
 /// Domain
 type SftpCommand = 
